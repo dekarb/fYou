@@ -5,6 +5,7 @@
 
 
 package fuckyou;
+import java.util.Scanner;
 
 /**
  *
@@ -12,9 +13,9 @@ package fuckyou;
  */
 public class FuckYou {
     
-    static boolean isPerfSquare(int x) {
-        int s = (int)Math.sqrt(x);
-        return (s * s == x);
+    static boolean isPerfSquare(int n) {
+        int s = (int)Math.sqrt(n);
+        return (s * s == n);
     }
     
     static boolean isFib(int n) {
@@ -22,36 +23,37 @@ public class FuckYou {
                 isPerfSquare(5 * n * n - 4);
     }
     
-    static boolean divisSeven(int x) {
-        return x % 7 == 0;
+    static boolean divisSeven(int n) {
+        return n % 7 == 0;
     }
     
     static boolean divEleven(int x) {
         return x % 11 == 0;
     }
     
-    static boolean isPrime(int x) {
-        if (x <= 1) {
+    static boolean isPrime(int n) {
+        if (n <= 1) {
             return false;
         }
-        for (int i = 2; i < x; i++) {
-            if (x % i == 0) {
+        for (int i = 2; i <= n; i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
         return true;
     }
         
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {        
-        int n = 10000;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a max number to play to: ");
+        int n = in.nextInt();
+        System.out.println();
         
         for (int i = 1; i <= n; i++) {
             if (isFib(i) == true || divisSeven(i) == true || divEleven(i) == true
                     || String.valueOf(i).contains("7") || isPrime(i) == true) {
-                System.out.println("Fuck You "  + "(" + i + ")");
+                System.out.println("Fuck You "  + "   (" + i + ")");
             } else {
                 System.out.println(i);
             }
