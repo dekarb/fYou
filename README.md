@@ -18,3 +18,5 @@ The game works this way:
     is reversed.
 
   - If you call a prime number, you say "Fuck You", and the order is reversed.
+
+  - If none of those conditions are true, just say the number and the order continues.
