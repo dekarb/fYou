@@ -20,3 +20,6 @@ The game works this way:
   - If you call a prime number, you say "Fuck You", and the order is reversed.
 
   - If none of those conditions are true, just say the number and the order continues.
+
+This game is intended to play with a group, and without the assistance of a computer. This program is intended to
+be a cheat-sheet for each turn.
